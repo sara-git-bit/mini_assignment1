@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>CSS Box Model and Float Layouts - LAB 4</title>
+    <!-- Link to external CSS stylesheet -->
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+  </head>
+  <body>
+    <!-- Main container for all content -->
+    <div class="wrapper">
+      
+      <!-- PAGE HEADER -->
+      <header>
+        <h1>CSS Layout Examples - LAB 4</h1>
+        <p>Learn about box model properties and float-based layouts with these practical examples</p>
+        <p>Study the HTML and CSS code to understand how each example works!</p>
+      </header>
+
+      <!-- MAIN CONTENT -->
+      <main>
+        <!-- SECTION 1: BOX MODEL EXAMPLE -->
+        <section>
+          <h2>Box Model Example</h2>
+          <p>This example demonstrates margin, padding and border properties to create styled boxes.</p>
+          
+          <div class="fancy-box-container">
+            <div class="fancy-box">A fancy box</div>
+            <div class="fancy-box">Another fancy box</div>
+          </div>
+        </section>
+
+        <!-- SECTION 2: BASIC COLUMN LAYOUT -->
+        <section>
+          <h2>Basic Two-Column Layout</h2>
+          <p>A simple two-column layout showing how padding affects total width calculations.</p>
+          
+          <div class="container">
+            <div class="column column-left">Left column</div>
+            <div class="column column-right">Right column</div>
+          </div>
+        </section>
+
+        <!-- SECTION 3: FLOAT ISSUES AND SOLUTIONS -->
+        <section>
+          <h2>Float Behavior Examples</h2>
+          
+          <!-- Example without clear fix -->
+          <h3>Without Clear Property</h3>
+          <p>When floats aren't managed, elements can wrap unpredictably:</p>
+          
+          <div class="container">
+            <div class="column column-left">Left column with a lot of text in it.</div>
+            <div class="column column-right">Right column</div>
+            <div class="column column-left">Left column with a lot of text in it.</div>
+            <div class="column column-right">Right column</div>
+          </div>
+          
+          <!-- Example with clear fix -->
+          <h3>With Clear Property</h3>
+          <p>The <code>clear</code> property ensures elements appear below floated elements:</p>
+          
+          <div class="container">
+            <div class="column column-left">Left column with a lot of text in it.</div>
+            <div class="column column-right">Right column</div>
+            <div class="column column-left column-cleared">Left column with a lot of text in it.</div>
+            <div class="column column-right">Right column</div>
+          </div>
+          
+          <!-- Example with fixed height -->
+          <h3>Fixed Height Solution</h3>
+          <p>Setting a fixed <code>height</code> prevents float overlap issues:</p>
+          
+          <div class="container">
+            <div class="column column-left cell-fixed-height">Left column with a lot of text in it.</div>
+            <div class="column column-right cell-fixed-height">Right column</div>
+            <div class="column column-left cell-fixed-height">Left column with a lot of text in it.</div>
+            <div class="column column-right cell-fixed-height">Right column</div>
+          </div>
+        </section>
+
+        <!-- SECTION 4: FLEXIBLE GRID SYSTEMS -->
+        <section class="grid-examples">
+          <h2>Flexible Grid System Examples</h2>
+          <p>These examples show how container width controls column layout with floated elements.</p>
+          
+          <!-- One column grid -->
+          <h3>One-Column Layout</h3>
+          <div class="container-1">
+            <div class="box">Box</div>
+            <div class="box">Box</div>
+            <div class="box">Box</div>
+            <div class="box">Box</div>
+            <div class="box">Box</div>
+            <div class="box">Box</div>
+          </div>
+          
+          <!-- Two column grid -->
+          <h3>Two-Column Layout</h3>
+          <div class="container-2">
+            <div class="box">Box</div>
+            <div class="box">Box</div>
+            <div class="box">Box</div>
+            <div class="box">Box</div>
+            <div class="box">Box</div>
+            <div class="box">Box</div>
+          </div>
+          
+          <!-- Three column grid -->
+          <h3>Three-Column Layout</h3>
+          <div class="container-3">
+            <div class="box">Box</div>
+            <div class="box">Box</div>
+            <div class="box">Box</div>
+            <div class="box">Box</div>
+            <div class="box">Box</div>
+            <div class="box">Box</div>
+          </div>
+          
+          <!-- Four column grid -->
+          <h3>Four-Column Layout</h3>
+          <div class="container-4">
+            <div class="box">Box</div>
+            <div class="box">Box</div>
+            <div class="box">Box</div>
+            <div class="box">Box</div>
+            <div class="box">Box</div>
+            <div class="box">Box</div>
+          </div>
+          
+          <!-- Five column grid -->
+          <h3>Five-Column Layout</h3>
+          <div class="container-5">
+            <div class="box">Box</div>
+            <div class="box">Box</div>
+            <div class="box">Box</div>
+            <div class="box">Box</div>
+            <div class="box">Box</div>
+            <div class="box">Box</div>
+          </div>
+          
+          <!-- Six column grid -->
+          <h3>Six-Column Layout</h3>
+          <div class="container-6">
+            <div class="box">Box</div>
+            <div class="box">Box</div>
+            <div class="box">Box</div>
+            <div class="box">Box</div>
+            <div class="box">Box</div>
+            <div class="box">Box</div>
+          </div>
+          
+          <p class="note">Tip: For better alignment in flexible grid systems, consider using CSS Flexbox.</p>
+        </section>
+
+        <!-- SECTION 5: BOX SIZING EXAMPLE -->
+        <section>
+          <h2>Box Sizing Example</h2>
+          <p>The <code>box-sizing: border-box</code> property includes padding and border in width calculations:</p>
+          
+          <div class="box-sizing-example-container">
+            <div class="box">Box</div>
+            <div class="box">Box</div>
+            <div class="box">Box</div>
+            <div class="box">Box</div>
+          </div>
+          
+          <p class="note">Note: This approach helps prevent layout issues when using padding and borders with floats.</p>
+        </section>
+
+      </main>
+
+    </div>
+  </body>
+</html>
